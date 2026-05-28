@@ -11,3 +11,4 @@ main.fdb_latexmk
 main.synctex.gz
 main.fls
 sections/experience.tex
+.DS_Store
