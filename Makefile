@@ -33,7 +33,9 @@ LATEX_OPTIONS := ${SYNCTEX_OPTION} ${SHELL_ESCAPE_OPTION} ${NONSTOPMODE_OPTION} 
 %.pdf: %.fig 
 	fig2dev -L eps -f Roman $*.fig >$*.eps
 
-all: ${TARGET}
+LACONIC := laconic
+
+all: ${TARGET} $(OUTPUT_DIR)/$(LACONIC).pdf
 
 $(TARGET): ${DEPENDENCIES}
 	-pdflatex ${LATEX_OPTIONS} $(NAME)
@@ -43,7 +45,11 @@ $(TARGET): ${DEPENDENCIES}
 	@echo '****************************************************************'
 	@echo '******** Did you spell-check the paper? ********'
 
+$(OUTPUT_DIR)/$(LACONIC).pdf: ${DEPENDENCIES}
+	-pdflatex ${LATEX_OPTIONS} $(LACONIC)
+	-pdflatex ${LATEX_OPTIONS} $(LACONIC)
+
 clean:
-	cd $(OUTPUT_DIR) && ls $(NAME)* | grep -v ".tex" | grep -v ".bib" | xargs rm -f
+	cd $(OUTPUT_DIR) && ls $(NAME)* $(LACONIC)* 2>/dev/null | grep -v ".tex" | grep -v ".bib" | xargs rm -f
 	cd $(OUTPUT_DIR) && rm -f *.bak *~ *_latexmk *.synctex.gz*
 

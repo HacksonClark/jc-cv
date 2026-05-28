@@ -101,17 +101,18 @@
 \titleformat{\section}{
     \scshape\raggedright\Large\color{color-title}}{}{0em}{}[\color{color-title}\titlerule
     \vspace{-\smallskipamount}]
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 
 % Footer
 % \fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
 
 % Lists
 \newcommand{\outerlist}[1]{
-    \begin{itemize}[leftmargin=*] #1 \end{itemize}}
+    \begin{itemize}[leftmargin=*,itemsep=3pt,topsep=3pt,parsep=0pt] #1 \end{itemize}}
 \newcommand{\denseouterlist}[1]{
-    \begin{itemize}[leftmargin=*,itemsep=0pt] #1 \end{itemize}}
+    \begin{itemize}[leftmargin=*,itemsep=1pt,topsep=2pt,parsep=0pt] #1 \end{itemize}}
 \newcommand{\innerlist}[1]{
-    \begin{itemize}[topsep=0pt] #1 \end{itemize}}
+    \begin{itemize}[topsep=1pt,itemsep=1pt,parsep=0pt] #1 \end{itemize}}
 \newcommand{\orderedouterlist}[1]{
     \begin{enumerate}[leftmargin=*] #1 \end{enumerate}}
 

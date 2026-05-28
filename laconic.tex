@@ -17,11 +17,6 @@
 % Choose theme, e.g. black, RedViolet, ForestGreen, MidnightBlue
 \def\theme{MidnightBlue}
 
-% More predefined colors can be found in 
-% https://en.wikibooks.org/wiki/LaTeX/Colors
-% Example photograph taken from Wikimedia Commons
-% https://commons.wikimedia.org/wiki/File:Kiara_Krit_passport.jpg
-
 \usepackage{simplecv}
 
 \boldname{Surname}{Name}{N.}
@@ -33,21 +28,9 @@
     Email: \email{jclark58@illinois.edu} \\
 }
 
-% \headingphoto{Name Surname}{
-%     Website: \website{example.com} \\ 
-%     Email: \email{example@example.edu} \\
-%     LinkedIn: \linkedin{name-surname} \\
-%     GitHub: \github{example}
-% }{photo.jpg}
-
-% Page One
+% Laconic, one-page version: experience, education, talks only.
 \import{sections/}{experience.tex}
 \import{sections/}{education.tex}
 \import{sections/}{talks.tex}
-\import{sections/}{teaching.tex}
-\import{sections/}{publications.tex}
-\import{sections/}{awards.tex}
-% {\import{sections/}{skills.tex}}
-\pagebreak
 
 \end{document}
