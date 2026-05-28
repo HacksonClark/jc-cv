@@ -10,3 +10,4 @@ main.fdb_latexmk
 .gitignore
 main.synctex.gz
 main.fls
+sections/experience.tex
