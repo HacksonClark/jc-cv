@@ -6,3 +6,7 @@ main.bcf
 .gitignore
 main.aux
 main.bbl
+main.fdb_latexmk
+.gitignore
+main.synctex.gz
+main.fls
